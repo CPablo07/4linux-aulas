@@ -1,0 +1,6 @@
+---
+# install rep
+- include_tasks: repo.yml
+
+# install puppet on linux devs
+- include_tasks: agent.yml
