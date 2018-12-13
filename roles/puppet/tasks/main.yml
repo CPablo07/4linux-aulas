@@ -1,6 +1,12 @@
 ---
 # install rep
-- include_tasks: repo.yml
-
-# install puppet on linux devs
-- include_tasks: agent.yml
+- import_tasks: repo.yml
+  tags:
+  - agent
+  - server
+- import_tasks: agent.yml
+  tags:
+  - agent
+- import_tasks: server.yml
+  tags:
+  - server

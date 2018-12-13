@@ -1,0 +1,11 @@
+---
+# install rep
+- include_tasks: repo.yml
+  tags:
+  - agent
+  - server
+- include_tasks: agent.yml
+  tags:
+  - agent
+- include_tasks: server.yml
+  - server
